@@ -5,7 +5,7 @@ class mongodb::repo (
   case $::osfamily {
     'RedHat', 'Linux': {
       if $mongodb::globals::use_enterprise_repo == true {
-        $location = 'https://repo.mongodb.com/yum/redhat/$releasever/mongodb-enterprise/stable/$basearch/'
+        $location = 'https://repo.mongodb.com/yum/redhat/$releasever/mongodb-enterprise/3.0/$basearch/'
         $description = 'MongoDB Enterprise Repository'
       }
       else {
